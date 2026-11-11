@@ -24,17 +24,6 @@ else{
 
 
 
-$numri3=7;
-$numri4=10;
-
-if($numri3=$numri4){
-    echo "yes" ;
-
-}
-else{
-    echo "no";
-}
-
 
 
 
