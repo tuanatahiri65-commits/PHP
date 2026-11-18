@@ -1,37 +1,3 @@
-<?php
-
-include_once("connection.php");
-
-if (isset($_POST["username"],$_POST["password"])){
-    $username=$_POST["username"];
-    $password=$_POST["password"];
-}
-
-
-
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -43,15 +9,15 @@ if (isset($_POST["username"],$_POST["password"])){
 </head>
 <body>
 
-<form method="post">
+<form method="post" action="add.php">
 
-    <labl for="username">Username:</labl>
-    <input type="text" id="usernname" name="username">
+    <labl for="email">email:</labl>
+    <input type="text" id="email" name="email">
 
     <labl for="password">Password:</labl>
     <input type="password" id="password" name="password">
 
-    <input type="submit" value="submit">
+    <input type="submit" namne="submit" value="submit">
 
 
 </form>            
