@@ -1,23 +1,33 @@
 <?php
 
-include_once("connection.php");
+include_once ('connection.php');
 
-if(isset($_POST['sumbit'])){
-    $email=$_POST['email'];
+if(isset($_POST['submit'])){
+    $username=$_POST['username'];
     $password=$_POST['password'];
 
+    $sql="insert into users (username,password)
+    values(:username,:password)";
 
-    $sql="insert into users (email,password)
-    values(:email,:password)";
-
-     $sqlQuery=$conn->prepare($sql);
-    $sqlQuery->bindParam(':email',$email);
+    $sqlQuery=$conn->prepare($sql);
+    $sqlQuery->bindParam(':username',$username);
     $sqlQuery->bindParam(':password',$password);
     $sqlQuery->execute();
-    echo " data save successfully";
+    echo "data save successfully";
 
 }
 
 
-
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
